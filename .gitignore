@@ -1,0 +1,4 @@
+mlopsenv
+src\tests\__pycache__
+.pytest_cache
+src\data\diamonds.csv
