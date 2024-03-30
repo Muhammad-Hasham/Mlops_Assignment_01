@@ -3,6 +3,8 @@ name: Unit Testing
 on:
   pull_request:
     branches: [dev]
+  push:
+    branches: [test]
 
 jobs:
   unit_testing:
@@ -25,4 +27,4 @@ jobs:
 
       - name: Run unit tests
         run: |
-          pytest src/tests/
+          pytest src/tests
