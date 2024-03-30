@@ -5,10 +5,10 @@ import joblib
 app = Flask(__name__)
 
 # Load the saved RandomForestRegressor model
-rf_model = joblib.load('../models/rf_model.pkl')
+rf_model = joblib.load('src/models/rf_model.pkl')
 
 # Load the label encoders for categorical features
-label_encoders = joblib.load('../models/label_encoders.pkl')
+label_encoders = joblib.load('src/models/label_encoders.pkl')
 
 
 @app.route('/predict', methods=['POST'])
