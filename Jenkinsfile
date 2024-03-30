@@ -2,7 +2,6 @@ pipeline {
     agent any
 
     stages {
-
         stage('Build Docker Image') {
             steps {
                 // Build Docker image using Dockerfile
@@ -22,7 +21,9 @@ pipeline {
 
     post {
         success {
-            echo 'Pipeline completed successfully!'
+            emailext body: 'Your Docker image has been pushed successfully.',
+                     subject: 'Jenkins Pipeline Success Notification',
+                     to: 'i200752@nu.edu.pk'
         }
         failure {
             echo 'Pipeline failed!'
