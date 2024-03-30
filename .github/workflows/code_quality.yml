@@ -27,4 +27,4 @@ jobs:
 
       - name: Run Flake8 for code quality check
         run: |
-          flake8 src/app/app.py
+          flake8 app.py
